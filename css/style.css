@@ -1,0 +1,575 @@
+:root {
+  --main-color: #19c8fa;
+  --transparent-color: rgb(15 116 143 / 70%);
+  --section-padding: 100px;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+.Landing {
+  position: relative;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-image: url("../ims/landing.jpg");
+  z-index: -2;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 60%);
+  z-index: -1;
+}
+.Landing .Brackets i:nth-of-type(1) {
+  position: absolute;
+  color: white;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  font-weight: 900;
+  z-index: 1;
+}
+
+.Landing .Brackets i:nth-of-type(2) {
+  position: absolute;
+  color: white;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  font-weight: 900;
+  z-index: 1;
+}
+.Landing .balls {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.Landing .balls .ball1 {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid white;
+}
+.Landing .balls .ball2 {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+}
+.Landing .balls .ball3 {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid white;
+}
+.Landing-content {
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  width: 50%;
+  height: fit-content;
+  max-height: 545px;
+  left: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--transparent-color);
+  color: white;
+}
+.Landing-content .content {
+  padding: 50px;
+  max-width: 80%;
+}
+.Landing-content .content h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 3.2rem;
+  font-weight: lighter;
+}
+.Landing-content .content h2 {
+  margin: 0;
+  padding: 0;
+  padding-top: 15px;
+  font-size: 3rem;
+  font-weight: lighter;
+}
+.Landing-content .content p {
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  line-height: 1.8;
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+@media screen and (max-width: 875px) {
+  .Landing-content {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+.Header {
+  width: 100vw;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+.Header .container {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid white;
+}
+.Header .container .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Header .container .nav {
+  width: 80%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.Header .container ul.list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.Header .container ul.list li {
+  position: relative;
+  color: white;
+  padding: 0 10px;
+  font-size: 1.7rem;
+  height: 100%;
+  cursor: pointer;
+}
+.Header .container ul.list li:hover {
+  color: var(--main-color);
+}
+.Header .container ul.list li::before {
+  content: "___________";
+  position: absolute;
+  display: none;
+  color: var(--main-color);
+  bottom: -31px;
+  left: calc(50% - 45px);
+}
+.Header .container ul.list li:hover:before {
+  display: block;
+}
+.Header .container .nav-sm {
+  display: none;
+  position: absolute;
+  background-color: hsl(0deg 0% 0% / 50%);
+  width: 100vw;
+  height: 288px;
+  padding: 0;
+  left: 0;
+  top: 77px;
+}
+
+.Header .container ul.list-sm {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0;
+  list-style: none;
+}
+.Header .container .list-sm li {
+  padding: 15px;
+  color: white;
+  font-size: 1.4rem;
+  width: 100%;
+}
+.Header .container .list-sm li:hover {
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+.Header .container .icon1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Header .container .icon1 i {
+  display: none;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.icon1 + .nav-sm {
+  display: block;
+}
+
+.Header .container .icon2 i {
+  position: relative;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding-left: 50px;
+}
+.Header .container .icon2 {
+  position: relative;
+}
+.Header .container .icon2::after {
+  position: absolute;
+  content: "_____";
+  color: white;
+  rotate: 90deg;
+  left: 15px;
+}
+@media screen and (max-width: 875px) {
+  .Header .container ul.list {
+    display: none;
+  }
+  .Header .container .icon1 i {
+    display: block;
+  }
+}
+.Landing-content {
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  width: 50%;
+  height: fit-content;
+  max-height: 545px;
+  left: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--transparent-color);
+  color: white;
+}
+.Landing-content .content {
+  padding: 50px;
+  max-width: 80%;
+}
+.Landing-content .content h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 3.2rem;
+  font-weight: lighter;
+}
+.Landing-content .content h2 {
+  margin: 0;
+  padding: 0;
+  padding-top: 15px;
+  font-size: 3rem;
+  font-weight: lighter;
+}
+.Landing-content .content p {
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  line-height: 1.8;
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+@media screen and (max-width: 875px) {
+  .Landing-content {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .Landing-content .content {
+    width: 100%;
+  }
+}
+.Services {
+  width: 100%;
+  height: fit-content;
+}
+.Services .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 50px;
+  width: 100%;
+  height: fit-content;
+  margin-top: var(--section-padding);
+  margin-bottom: var(--section-padding);
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.Services .container .content {
+  display: flex;
+}
+.Services .container .content i {
+  margin-right: 50px;
+  align-self: center;
+  font-size: 4.5rem;
+}
+.Services .container .content .txt h4 {
+  color: var(--main-color);
+  font-size: 2rem;
+}
+.Services .container .content .txt p {
+  font-size: 1.4rem;
+  color: #777;
+  line-height: 1.8;
+}
+@media screen and (min-width: 770px) and (max-width: 990px) {
+  .Services .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+@media screen and (min-width: 1px) and (max-width: 769px) {
+  .Services .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    text-align: center;
+  }
+  .Services .container .content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Services .container .content i {
+    margin: auto;
+  }
+}
+.desing-futures {
+  position: relative;
+  width: 100vw;
+  height: 85vh;
+  background-image: url("../ims/design-features.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: hidden;
+  z-index: -2;
+  margin-bottom: 50px;
+}
+.desing-futures img {
+  position: absolute;
+  bottom: -80px;
+  left: 150px;
+}
+.desing-futures .content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: var(--transparent-color);
+  width: 50%;
+  height: fit-content;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  color: white;
+  padding: 50px;
+}
+.desing-futures .content h3 {
+  font-size: 2.5rem;
+  font-weight: lighter;
+  margin-bottom: 50px;
+}
+.desing-futures .content .txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.desing-futures .content .txt .future {
+  gap: 20px;
+  display: flex;
+}
+.desing-futures .content .txt .future i {
+  align-self: center;
+  font-size: 1.7rem;
+}
+.desing-futures .content .txt .future p {
+  font-size: 1.7rem;
+}
+@media screen and (min-width: 1px) and (max-width: 980px) {
+  .desing-futures img {
+    display: none;
+  }
+  .desing-futures .content {
+    width: 100%;
+  }
+}
+.Protofolio {
+  width: 100vw;
+  height: fit-content;
+}
+.Protofolio .list {
+  margin: auto;
+  margin-top: 120px;
+  margin-bottom: 60px;
+}
+.Protofolio .list ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.Protofolio .list ul li {
+  font-size: 1.7rem;
+}
+.Protofolio .list ul li:nth-of-type(1) {
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px;
+}
+.Protofolio .container {
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.Protofolio .container .img {
+  position: relative;
+  overflow: hidden;
+}
+.Protofolio .container img {
+  max-width: 100%;
+  max-height: 100%;
+  transition: all 0.5s ease;
+}
+.Protofolio .container img:hover {
+  transform: scale(1.2);
+  rotate: 5deg;
+}
+.Protofolio .container .img:hover .txt {
+  bottom: 0;
+}
+.Protofolio .container .txt {
+  position: absolute;
+  width: 100%;
+  bottom: -100%;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.792);
+  padding: 20px;
+  transition: all 0.5s ease;
+}
+.Protofolio .container .txt h3 {
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+  font-size: 1.6rem;
+  padding-bottom: 10px;
+}
+.Protofolio .container .txt p {
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: var(--main-color);
+}
+.Protofolio .more {
+  width: fit-content;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+  .Protofolio .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+@media screen and (min-width: 1px) and (max-width: 599px) {
+  .Protofolio .container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+  }
+}
+.Video {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+}
+.Video video {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  z-index: -2;
+}
+.Video .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 60%);
+  z-index: -1;
+}
+.Video .container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100%;
+  background-color: var(--transparent-color);
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.Video .container h3 {
+  color: white;
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+  font-size: 2rem;
+  font-weight: 300;
+}
+.Video .container p:nth-of-type(1) {
+  font-weight: 300;
+  font-size: 1.8rem;
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+}
+.Video .container p:nth-of-type(2) {
+  background-color: black;
+  font-size: 1.3rem;
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.about {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.about img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
