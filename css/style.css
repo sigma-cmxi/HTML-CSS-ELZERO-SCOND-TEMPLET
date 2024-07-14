@@ -24,7 +24,7 @@ html {
   background-size: cover;
   height: 100vh;
   background-image: url("../images/landing.jpg");
-  z-index: -2;
+  z-index: -1;
 }
 .overlay {
   position: absolute;
@@ -33,7 +33,7 @@ html {
   width: 100%;
   height: 100%;
   background-color: rgb(0 0 0 / 60%);
-  z-index: -1;
+  z-index: -2;
 }
 .Landing .Brackets i:nth-of-type(1) {
   position: absolute;
@@ -569,7 +569,80 @@ html {
 }
 .about img {
   position: absolute;
-  bottom: 0;
+  bottom: -100px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: -2;
+}
+.stats {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: fit-content ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/stats.png);
+  z-index: -1;
+  margin-bottom: 100px;
+}
+.stats .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 60%);
+  z-index: -2;
+}
+.stats .container {
+  background-color: var(--transparent-color);
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.stats .container .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 50px;
+  min-width: fit-content;
+}
+.stats .container .content div {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+}
+.stats .container .content i {
+  color: white;
+  font-size: 2rem;
+}
+.stats .container .content h3 {
+  margin: 0;
+  padding: 0;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 4.5rem;
+  text-align: center;
+}
+.stats .container .content p {
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  text-align: center;
 }
