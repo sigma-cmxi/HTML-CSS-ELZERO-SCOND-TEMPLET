@@ -977,3 +977,126 @@ html {
   margin-top: 20px;
   font-size: 1.5rem;
 }
+.Pricing {
+  margin-bottom: 100px;
+}
+.Pricing .container {
+  width: 100%;
+  height: fit-content;
+  padding: 7%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4 , 1fr);
+  gap: 30px;
+}
+.Pricing .container .content {
+  background-color: #fcfcfc;
+  border-top: 1px solid var(--main-color);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.Pricing .container .content .head {
+  padding: 30px;
+  width: 100%;
+  border-bottom: 1px solid var(--main-color);
+}
+.Pricing .container .content .head h4 {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  font-size: 1.8rem;
+}
+.Pricing .container .content .head .price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.Pricing .container .content .head p:nth-of-type(1){
+  margin: 0;
+  padding: 0;
+  font-size: 2.5rem;
+  align-self: flex-start;
+  margin-right: 10px;
+}
+.Pricing .container .content .head p:nth-of-type(2) {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 6rem;
+}
+.Pricing .container .content .head p:nth-of-type(3) {
+  align-self: flex-end;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-left: 10px;
+}
+.Pricing .container .content .body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.Pricing .container .content .body p {
+  padding: 0;
+  margin: 0;
+  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: lighter ;
+  width: fit-content;
+  border-bottom: 1px solid var(--main-color);
+}
+.Pricing .container .content .body p:nth-of-type(4) {
+  width: 100%;
+  border-bottom: 1px solid var(--main-color);
+}
+.Pricing .container .content .foot {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Pricing .container .content .foot button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+.Pricing .txt {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Pricing .txt p {
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.Pricing .txt button {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 930px) and (max-width: 1200px) {
+  .Pricing .container {
+    grid-template-columns: repeat(3 , 1fr);
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 929px) {
+  .Pricing .container {
+    grid-template-columns: repeat(2 , 1fr);
+  }
+}
+@media screen and (min-width: 1px) and (max-width: 599px) {
+  .Pricing .container {
+    grid-template-columns: repeat(1 , 1fr);
+  }
+}
