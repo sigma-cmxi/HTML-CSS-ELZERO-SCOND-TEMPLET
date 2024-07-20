@@ -1080,6 +1080,7 @@ html {
   padding: 0;
   font-size: 2rem;
   margin-bottom: 20px;
+  text-align: center;
 }
 .Pricing .txt button {
   text-transform: capitalize;
@@ -1183,5 +1184,99 @@ font-size: 1.8rem;
   }
   .email .container .txt {
     width: 100%;
+  }
+}
+.contact {
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 100px;
+}
+.contact .container {
+  width: 100%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 3fr 1fr ;
+  margin: auto;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 100px;
+  gap: 4%;
+}
+.contact .container .inputs {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+.contact .container .inputs input {
+  position: relative;
+  width: 100%;
+  border: 1px solid #c8c8c8;
+  margin-bottom: 4%;
+  padding: 20px;
+}
+.contact .container .inputs input::placeholder {
+  position: absolute;
+  color: #777;
+  font-size: 1.6rem;
+
+}
+.contact .container .inputs input:focus {
+  outline: none;
+}
+.contact .container .inputs textarea {
+  position: relative;
+  width: 100%;
+  border: 1px solid #c8c8c8;
+  margin-bottom: 4%;
+  padding: 20px;
+  min-height: 200px;
+}
+.contact .container .inputs textarea::placeholder {
+
+  color: #777;
+  font-size: 1.6rem;
+}
+.contact .container .txt {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+.contact .container .txt .touch {
+  width: 100%;
+}
+.contact .container .txt h3 {
+  font-weight: 300;
+  font-size: 1.8rem;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.contact .container .txt .place  h3 {
+  margin-top: 50px;
+}
+.contact .container .txt p {
+  margin: 0;
+  padding: 0;
+  color: #777;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1.7rem;
+}
+.contact .container .button {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.contact .container .button button {
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 1px) and (max-width: 780px) {
+  .contact .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat( 3 , auto);
+  }
+  .contact .container .button {
+    justify-content: center ;
   }
 }
