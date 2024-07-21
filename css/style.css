@@ -986,7 +986,7 @@ html {
   padding: 7%;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(4 , 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 }
 .Pricing .container .content {
@@ -1016,7 +1016,7 @@ html {
   align-items: center;
   margin-top: 20px;
 }
-.Pricing .container .content .head p:nth-of-type(1){
+.Pricing .container .content .head p:nth-of-type(1) {
   margin: 0;
   padding: 0;
   font-size: 2.5rem;
@@ -1049,7 +1049,7 @@ html {
   margin: 0;
   padding: 20px;
   font-size: 1.5rem;
-  font-weight: lighter ;
+  font-weight: lighter;
   width: fit-content;
   border-bottom: 1px solid var(--main-color);
 }
@@ -1088,17 +1088,17 @@ html {
 }
 @media screen and (min-width: 930px) and (max-width: 1200px) {
   .Pricing .container {
-    grid-template-columns: repeat(3 , 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media screen and (min-width: 600px) and (max-width: 929px) {
   .Pricing .container {
-    grid-template-columns: repeat(2 , 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (min-width: 1px) and (max-width: 599px) {
   .Pricing .container {
-    grid-template-columns: repeat(1 , 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 .email {
@@ -1133,9 +1133,8 @@ html {
   gap: 4%;
 }
 .email .container .input {
-  width: 50%;
+  width: 100%;
   color: white;
-  width: fit-content;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1166,8 +1165,8 @@ html {
 }
 .email .container .input button {
   margin: 0;
-padding: 23px 40px;
-font-size: 1.8rem;
+  padding: 23px 40px;
+  font-size: 1.8rem;
 }
 .email .container .txt {
   width: 50%;
@@ -1195,7 +1194,7 @@ font-size: 1.8rem;
   width: 100%;
   height: fit-content;
   display: grid;
-  grid-template-columns: 3fr 1fr ;
+  grid-template-columns: 3fr 1fr;
   margin: auto;
   padding-left: 10%;
   padding-right: 10%;
@@ -1218,7 +1217,6 @@ font-size: 1.8rem;
   position: absolute;
   color: #777;
   font-size: 1.6rem;
-
 }
 .contact .container .inputs input:focus {
   outline: none;
@@ -1232,7 +1230,6 @@ font-size: 1.8rem;
   min-height: 200px;
 }
 .contact .container .inputs textarea::placeholder {
-
   color: #777;
   font-size: 1.6rem;
 }
@@ -1252,7 +1249,7 @@ font-size: 1.8rem;
   padding: 0;
   margin-bottom: 20px;
 }
-.contact .container .txt .place  h3 {
+.contact .container .txt .place h3 {
   margin-top: 50px;
 }
 .contact .container .txt p {
@@ -1274,9 +1271,12 @@ font-size: 1.8rem;
 @media screen and (min-width: 1px) and (max-width: 780px) {
   .contact .container {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat( 3 , auto);
+    grid-template-rows: repeat(3, auto);
   }
   .contact .container .button {
-    justify-content: center ;
+    justify-content: center;
+  }
+  .contact .container .txt {
+    text-align: center;
   }
 }
