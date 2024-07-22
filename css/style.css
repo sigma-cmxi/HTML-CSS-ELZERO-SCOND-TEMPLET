@@ -101,6 +101,7 @@ html {
 .Landing-content .content {
   padding: 50px;
   max-width: 80%;
+  overflow-y: hidden;
 }
 .Landing-content .content h3 {
   margin: 0;
@@ -564,7 +565,7 @@ html {
 }
 .about {
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   position: relative;
 }
 .about img {
@@ -1139,6 +1140,7 @@ html {
   justify-content: space-between;
   align-items: center;
   border: 1px solid white;
+  overflow: hidden;
 }
 .email .container .input .txtbox {
   padding: 20px 30px;
@@ -1279,4 +1281,72 @@ html {
   .contact .container .txt {
     text-align: center;
   }
+}
+.footer {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  background-image: url(../images/subscribe.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
+}
+.footer .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -2;
+}
+.footer .container {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer .container .img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+.footer .container h3 {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+.footer .container hr {
+  width: 15%;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.footer .container .icons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+.footer .container .icons i {
+  font-size: 1.7rem;
+}
+.footer .container p {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  font-size: 1.6rem;
+  margin-bottom: 40px;
+}
+.footer .container span {
+  color: var(--main-color);
+  font-weight: bold;
 }
